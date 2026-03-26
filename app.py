@@ -24,7 +24,9 @@ def generate_signal(symbol):
         "tp": tp,
         "confidence": random.randint(70, 90)
     }
-
+@app.route('/')
+def home():
+    return "Forex Signal Bot is running 🚀".
 @app.route('/signals')
 def signals():
     return jsonify([generate_signal(s) for s in SYMBOLS])
